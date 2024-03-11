@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - node_modules:/usr/src/app/node_modules
+      - app_volume:/usr/src/app
+volumes:
+  node_modules:
+  app_volume:
